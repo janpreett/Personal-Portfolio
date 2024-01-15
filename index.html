@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JanpreetSwatch</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- used to add icons -->
+	<script src="buttontoggle.js"></script>
+</head>
+<body>
+
+<!----------------------Header---------------------->
+
+	<header class = "header">
+		 <a href="#" class = "logo">Janpreet.</a>
+
+		<nav class="navbar">
+			<a href="#home" style="--i:1;" class="active">Home</a>
+			<a href="#about" style="--i:2;" >About</a>
+			<a href="#projects" style="--i:3;" >Projects</a>
+			<a href="mailto:janpreetswatch@gmail.com" style="--i:4;" class="contact-link">Contact Me</a>
+		</nav>
+	</header>
+
+<!----------------------Home---------------------->
+
+	<section class="home" id="home">
+		<div class="home-sci">
+			<a href="https://ca.linkedin.com/in/janpreet-swatch" target="_blank"><i class='bx bxl-linkedin'></i></a>
+			<a href="https://github.com/janpreett" target="_blank"><i class='bx bxl-github'></i></a>
+		</div>
+
+		<div class="home-content">
+			<h1>Hi, I'm Janpreet Swatch</h1>
+			<h3>Software Developer</h3>
+			<p>I am currently studying Software Engineering Technology at McMaster University.</p>
+			<a href="mailto:janpreetswatch@gmail.com" class="btn">Let's Connect</a>
+			<a href="Resume.pdf" download class="btn">Download CV</a>
+		</div>
+
+		<div class="home-img">
+			<div class ="glowing-circle">
+				<span></span>
+				<span></span>
+				<div class="image">
+					<img src="dev.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!----------------------About---------------------->	
+
+	<section class="about" id="about">
+		<div class="about-content">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="about.png">
+				</div>	
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>Hello! I'm a dedicated software developer currently pursuing a degree in Software Engineering at McMaster University. This portfolio showcases my passion for creating innovative solutions through code. Explore my projects and get in touch to discuss potential collaborations or learn more about my technical expertise.</p>
+					<div class="tab-titles">
+						<P class="tab-links active-link" onclick="opentab('skills')">Skills</P>
+						<P class="tab-links" onclick="opentab('experience')">Experience</P>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><span>Front-End Development</span><br>CSS<br>HTML<br>JavaScript</li>
+							<li><span>Back-End Development</span><br>C<br>Java<br>Python</li>
+							<li><span>Version Control</span><br>Git</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>2022 - Current</span><br>McMaster University - Software Engineering Technology - B.Tech</li>
+							<li><span>2019-2022</span><br>Humber College - Computer Engineering - Advanced Diploma</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!----------------------Projects---------------------->	
+
+<section class="projects" id="projects">
+	<div class="projects-content">
+		<h1 class="sub-title">My Work</h1>
+			<div class="work-list">
+				<div class="work">
+					<img src="truck.png">
+					<div class="layer">
+						<h3>Fuel Transport Company Webiste</h3>
+						<p>A basic website for a fuel transport company, featuring services and contact information.</p>
+						<a href="https://github.com/janpreett/Swatch-Fuel-Transport" target="_blank"><i class='bx bxl-github'></i></a>
+						<a href="https://janpreett.github.io/Swatch-Fuel-Transport/"target="_blank"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="lock.png">
+					<div class="layer">
+						<h3>Smart Lock</h3>
+						<p>An RFID-based smart lock using Android Studio and Python.</p>
+						<a href="https://github.com/dillonPermaul2657/TheSmartLock" target="_blank"><i class='bx bxl-github'></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="spam.png">
+					<div class="layer">
+						<h3>Spam Detection</h3>
+						<p>A machine learning model for detecting spam emails.</p>
+						<a href="https://github.com/janpreett/Spam-Email-Detection"><i class='bx bxl-github'></i></a>
+					</div>
+				</div>
+				<div class="hidden-work">
+					<img src="portfolio.png">
+					<div class="layer">
+						<h3>Portfolio</h3>
+						<p>To showcase my projects and technical expertise.</p>
+						<a href="https://github.com/janpreett/Portfolio"><i class='bx bxl-github'></i></a>
+					</div>
+				</div>
+			</div>
+	</div>
+			<a href="#" class="btn2">See more</a>
+			<a href="#" class="btn3">Hide</a>
+	</div>
+</section>
+
+<!----------------------Footer--------------------->
+
+<section>
+	<div class ="footer">
+		<p>Made with love <i class='bx bx-heart'></i></p>
+	</div>
+</section>
+
+<!----------------------Script---------------------->
+
+<script>
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents");
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents){
+			tabcontent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+
+
+	document.addEventListener("keydown", function (event){
+    if (event.ctrlKey){
+       event.preventDefault();
+    }
+    if(event.keyCode == 123){
+       event.preventDefault();
+    }
+});
+
+document.addEventListener('contextmenu', 
+     event => event.preventDefault()
+);
+
+</script>
+
+
+</body>
+</html>
