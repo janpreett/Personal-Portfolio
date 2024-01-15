@@ -619,13 +619,14 @@ body {
         flex-basis: 100%;
     }
 
-    .about-col-1, {
+    .about-col-1 {
         margin-bottom: 30px;
     }
 
     .work-list {
         grid-template-columns: 1fr;
     }
-}
+} 
+
 
    
