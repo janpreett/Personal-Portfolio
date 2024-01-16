@@ -76,6 +76,9 @@ body {
     border-radius: 4px; 
 }
 
+.menu-btn {
+    display: none; 
+}
 /* ----------Home---------- */
 
 .home {
@@ -108,7 +111,6 @@ body {
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
-
 
 .home-content p {
     font-size: 16px;
@@ -512,7 +514,7 @@ body {
     font-size: 20px;
     color: #000;
     text-decoration: none;
-    margin: 20px 0;
+    margin: 3px 0;
     z-index: 1;
 }
 
@@ -597,18 +599,85 @@ body {
     background: transparent;
     margin-top: 20px;
 }
+
 /* ----------Small Screen---------- */
 
 @media only screen and (max-width: 600px){
-    
-    .home {
-        padding: 30px 10% 0; 
-        text-align: center; 
+
+    .menu-btn {
+        display: block; 
     }
 
+    .navbar {
+        display: none; 
+        flex-direction: column; 
+        align-items: center;
+        position: fixed;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: black;
+        z-index: 1;
+        padding-bottom: 20px; 
+        padding-top: 20px;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.3s;
+    }
+
+    .navbar.show {
+        display: flex; 
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .home-sci {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px; 
+    }
+
+    .home-img {
+        width: auto;
+        height: auto;
+        margin-top: 30px;
+        order: -1; 
+    } 
+
     .home-content {
-        max-width: 100%;
-        margin-left: 0; 
+        text-align: center;
+        width: auto;
+        margin-left: 0;
+        padding: 0 20px;
+        z-index: 1; 
+    }
+
+    .home-content h1,
+    .home-content h3,
+    .home-content p,
+    .btn {
+        margin: 20px 0;
+    }
+
+    .home-sci a {
+        margin: 10px;
+    }
+
+    .contact-link {
+        margin-top: 20px;
+    }
+
+    .btn2, .btn3 {
+        margin-top: 20px;
     }
 
     .sub-title {
@@ -624,9 +693,13 @@ body {
     }
 
     .work-list {
+
         grid-template-columns: 1fr;
     }
-} 
-
-
-   
+    .layer {
+        padding: 0 5px; 
+    }
+    .layer a {
+        margin: 1px 0; 
+    }
+}
